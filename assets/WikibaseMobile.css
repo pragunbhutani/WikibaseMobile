@@ -1,0 +1,112 @@
+#container	{
+	width: 400px;
+}
+
+#title-bar 	{
+	width: 100%;
+}
+
+#title-bar h2 	{
+	margin-left: 10px;
+	width: 80%;
+	font-family: Helvetica Neue;
+	font-weight: lighter;
+	font-size: 32px;
+	color: rgb(0,0,0);
+	display: inline-block;
+}
+
+#edit-button {
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0,0,0,0.5);
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#description-box	{
+	margin-top: -7%;
+	width: 100%;
+	height: auto;
+}
+
+#description-box p {
+	font-family: sans-serif;
+	font-weight: lighter;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#alias-box {
+	width: 100%;
+	height: auto;
+}
+
+#alias-box h4 {
+	font-family: sans-serif;
+	font-weight: lighter;
+	margin-left: 10px;
+	display: inline;
+	font-size: 0.8em;
+}
+
+#alias-box p {
+	font-family: sans-serif;
+	font-weight: lighter;
+	display: inline;
+	font-size: 0.8em;
+}
+
+#statements-container	{
+	clear: both;
+	width: 100%;
+	border-top: 1px solid grey;
+	margin-top: 10px;
+}
+
+.statement {
+	width: 40%;
+	height: 15%;
+	border: 1px solid black;
+	display: inline-block;
+	margin-top: 3%;
+	margin-left: 5%;
+}
+
+.statement-add {
+	width: 40%;
+	height: 15%;
+	border: 1px dashed grey;
+	display: inline-block;
+	margin-top: 3%;
+	margin-left: 5%;
+}
+
+.statement h5 {
+	position: fixed;
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-size: 0.9em;
+	color: rgba(0,0,0,0.5);
+	margin-top: 0.5%;
+	margin-left: 0.5%;
+}
+
+.statement p {
+	position: fixed;
+	font-family: sans-serif;
+	font-size: 1em;
+	margin-top: 2.5%;
+	margin-left: 0.5%;
+	width: 12%;
+	color: rgba(0,0,0,0.8);
+}
+
+.statement .sources {
+	position: fixed;
+	font-family: sans-serif;
+	font-size: 0.8em;
+	margin-top: 6.5%;
+	margin-left: 0.5%;
+	color: rgba(255,0,0,0.7);
+}
