@@ -32,3 +32,5 @@ $wgResourceModules['skins.WikibaseMobile'] = array(
    'remoteBasePath' => &$GLOBALS['wgStylePath'],
    'localBasePath' => &$GLOBALS['wgStyleDirectory'],
 );
+
+$wgMFDefaultSkinClass = 'MobileWikibase';
