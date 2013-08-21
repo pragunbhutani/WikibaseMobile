@@ -27,8 +27,6 @@
 <html>
 	<head>
 		<title>Mostly Harmless - Wikidata</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<script type="text/javascript" src="scripts.js"></script>
 	</head>
 	<body>
 		<div id="container">
