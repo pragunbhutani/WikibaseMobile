@@ -27,7 +27,7 @@ $wgExtensionMessagesFiles['WikibaseMobile'] = dirname(__FILE__) . '/WikibaseMobi
 
 $wgResourceModules['skins.WikibaseMobile'] = array(
    'styles' => array(
-       'erudite/assets/WikibaseMobile.css' => array( 'media' => 'screen' ),
+       'WikibaseMobile/assets/WikibaseMobile.css' => array( 'media' => 'screen' ),
    ),
    'remoteBasePath' => &$GLOBALS['wgStylePath'],
    'localBasePath' => &$GLOBALS['wgStyleDirectory'],

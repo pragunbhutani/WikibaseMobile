@@ -21,5 +21,5 @@ $messages['en'] = array(
  * @author Pragun Bhutani
  */
 $messages['qqq'] = array(                                                     //TODO: Discuss Skin name.
-   'erudite-desc' => '{{desc|name=WikibaseMobile|url=http://www.mediawiki.org/wiki/Skin:WikibaseMobile}}',
+   'wikibase-mobile-desc' => '{{desc|name=WikibaseMobile|url=http://www.mediawiki.org/wiki/Skin:WikibaseMobile}}',
 );
