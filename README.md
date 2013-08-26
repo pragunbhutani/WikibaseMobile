@@ -7,8 +7,7 @@ This extension contains the mobile skin created for Wikidata as my Google Summer
 
 ## Instructions
 
-#### NOTE : The purpose of this extension is to provide mobile functionality on Wikidata and may not support all
-Wikibase installations.
+##### NOTE : The purpose of this extension is to provide mobile functionality on Wikidata and may not support all Wikibase installations.
 
 #### Dependancies :
 - Wikibase
