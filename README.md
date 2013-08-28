@@ -25,7 +25,7 @@ git clone https://github.com/pragunbhutani/WikibaseMobile.git
 After the repo has been cloned into your extensions directory, add the following to your `localSettings.php`:
 
 ```php
-require_once "$IP/extensions/WikibaseMobile/WikibaseMobile.php";
+require_once( "$IP/extensions/WikibaseMobile/WikibaseMobile.php" );
 ```
 
 NOTE : The line mentioned above must be added AFTER `require_once "$IP/extensions/MobileFrontend/MobileFrontend.php";`
