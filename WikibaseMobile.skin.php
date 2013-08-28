@@ -7,8 +7,9 @@
  */
 
 	class WikibaseMobile extends SkinMinerva {
-		public $skinname = 'WikibaseMobile';								//TODO: Discuss Skin name.
-		public $template = 'WikibaseMobileTemplate';						//here as well
+		public $skinname = 'WikibaseMobile';
+		public $stylename = 'WikibaseMobile';									//TODO: Discuss Skin name.
+		public $template = 'WikibaseMobileTemplate', $useHeadElement = true;	//here as well
 
 		/**
 		 * Initializes output page and sets up skin-specific parameters
