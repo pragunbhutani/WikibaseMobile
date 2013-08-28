@@ -29,8 +29,8 @@ $wgResourceModules['skins.WikibaseMobile'] = array(
    'styles' => array(
        'WikibaseMobile/assets/WikibaseMobile.css' => array( 'media' => 'screen' ),
    ),
-   'remoteBasePath' => &$GLOBALS['wgStylePath'],
-   'localBasePath' => &$GLOBALS['wgStyleDirectory'],
+   'remoteBasePath' => '/srv/mediawiki/extensions/',
+   'localBasePath' => '/srv/mediawiki/extensions/',
 );
 
 $wgMFDefaultSkinClass = 'WikibaseMobile';									//Not sure if correct way
