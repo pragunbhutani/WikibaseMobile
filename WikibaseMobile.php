@@ -25,12 +25,13 @@ $wgValidSkinNames['wikibasemobile'] = 'WikibaseMobile';
 $wgAutoloadClasses['WikibaseMobile'] = dirname(__FILE__) . '/WikibaseMobile.skin.php';
 $wgExtensionMessagesFiles['WikibaseMobile'] = dirname(__FILE__) . '/WikibaseMobile.i18n.php';
 
+$localBasePath = dirname( __DIR__ );
+$remoteExtPath = 'WikibaseMobile';
+
 $wgResourceModules['skins.WikibaseMobile'] = array(
-   'styles' => array(
-       'WikibaseMobile/assets/WikibaseMobile.css' => array( 'media' => 'screen' ),
-   ),
-   'remoteBasePath' => '/srv/mediawiki/extensions/',
-   'localBasePath' => '/srv/mediawiki/extensions/',
+   'styles' => 'WikibaseMobile/assets/WikibaseMobile.css',
+   'remoteExtPath' => $remoteExtPath,
+   'localBasePath' => $localBasePath,
 );
 
 $wgMFDefaultSkinClass = 'WikibaseMobile';									//Not sure if correct way

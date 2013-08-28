@@ -8,8 +8,9 @@
 
 	class WikibaseMobile extends SkinMinerva {
 		public $skinname = 'WikibaseMobile';
-		public $stylename = 'WikibaseMobile';									//TODO: Discuss Skin name.
-		public $template = 'WikibaseMobileTemplate', $useHeadElement = true;	//here as well
+		public $stylename = 'WikibaseMobile';				//TODO: Discuss Skin name.
+		public $template = 'WikibaseMobileTemplate';			//here as well
+		// $useHeadElement = true;
 
 		/**
 		 * Initializes output page and sets up skin-specific parameters
@@ -17,14 +18,13 @@
 		 */
 		public function initPage( OutputPage $out ) {
 			parent::initPage( $out );
-			$out->addHeadItem( 'title', '<title>Wikidata - Mostly Harmless</title>');
+			// $out->addHeadItem( 'title', '<title>Wikidata - Mostly Harmless</title>');
 		}
 
 		public function setupSkinUserCss( OutputPage $out ) {
        		parent::setupSkinUserCss( $out );
        		$out->addModuleStyles( 'skins.WikibaseMobile' );
-   			}
-		}
+   		}
 
 		public function prepareData( BaseTemplate $tpl ) {
 			parent::prepareData( $tpl );									//Incoming sample HTML!!!
