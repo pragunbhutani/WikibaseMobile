@@ -16,14 +16,17 @@
 		 */
 		public function initPage( OutputPage $out ) {
 			parent::initPage( $out );
-			// add styling
-			$out->addModuleStyles( 'skins.WikibaseMobile' );
+			$out->addHeadItem( 'title', '<title>Wikidata - Mostly Harmless</title>');
+		}
+
+		function setupSkinUserCss( OutputPage $out ) {
+       		parent::setupSkinUserCss( $out );
+       		$out->addModuleStyles( 'skins.WikibaseMobile' );
+   			}
 		}
 
 		public function prepareData( BaseTemplate $tpl ) {
 			parent::prepareData( $tpl );									//Incoming sample HTML!!!
-
-			$tpl->set( 'HeadElement', '<title>Wikidata - Mostly Harmless</title>');
 
 			$tpl->set( 'WikibaseMobileData', '
 
@@ -80,7 +83,6 @@
 
 	class WikibaseMobileTemplate extends MinervaTemplate {
   		protected function renderContentWrapper( $data ) {
-			echo $data['HeadElement'];
 			echo $data['WikibaseMobileData'];
 		}
 	}
