@@ -20,7 +20,7 @@
 			$out->addHeadItem( 'title', '<title>Wikidata - Mostly Harmless</title>');
 		}
 
-		function setupSkinUserCss( OutputPage $out ) {
+		public function setupSkinUserCss( OutputPage $out ) {
        		parent::setupSkinUserCss( $out );
        		$out->addModuleStyles( 'skins.WikibaseMobile' );
    			}
