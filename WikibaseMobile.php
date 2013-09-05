@@ -35,7 +35,7 @@ $wgResourceModules['skins.WikibaseMobile'] = array(
        'WikibaseMobile/assets/WikibaseMobile66em.css' => array( 'media' => 'screen and (max-width: 66em)' ),
        'WikibaseMobile/assets/WikibaseMobile60em.css' => array( 'media' => 'screen and (max-width: 60em)' ),
        'WikibaseMobile/assets/WikibaseMobile40em.css' => array( 'media' => 'screen and (max-width: 40em)' ),
-       'WikibaseMobile/assets/WikibaseMobile20em.css' => array( 'media' => 'screen and (max-width: 20em)' ),
+       'WikibaseMobile/assets/WikibaseMobile30em.css' => array( 'media' => 'screen and (max-width: 30em)' ),
    ),
    'remoteExtPath' => $remoteExtPath,
    'localBasePath' => $localBasePath,
