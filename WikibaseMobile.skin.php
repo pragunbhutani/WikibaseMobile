@@ -19,6 +19,13 @@
 		public function initPage( OutputPage $out ) {
 			parent::initPage( $out );
 			// $out->addHeadItem( 'title', '<title>Wikidata - Mostly Harmless</title>');
+
+			/* Assures mobile devices that the site doesn't assume traditional
+        	* desktop dimensions, so they won't downscale and will instead respect
+        	* things like CSS's @media rules */
+       		$out->addHeadItem( 'viewport',
+       			'<meta name="viewport" content="width=device-width, initial-scale=1">'
+       		);
 		}
 
 		public function setupSkinUserCss( OutputPage $out ) {
