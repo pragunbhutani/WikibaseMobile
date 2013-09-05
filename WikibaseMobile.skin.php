@@ -6,7 +6,7 @@
  * @ingroup Skins
  */
 
-	class WikibaseMobile extends SkinMinerva {
+	class WikibaseMobile extends SkinMobile {
 		public $skinname = 'WikibaseMobile';
 		public $stylename = 'WikibaseMobile';				//TODO: Discuss Skin name.
 		public $template = 'WikibaseMobileTemplate';			//here as well
@@ -18,7 +18,8 @@
 		 */
 		public function initPage( OutputPage $out ) {
 			parent::initPage( $out );
-			// $out->addHeadItem( 'title', '<title>Wikidata - Mostly Harmless</title>');
+			$out->addModuleStyles( 'skins.WikibaseMobile' );
+			$out->addModules( 'scripts.WikibaseMobile' );
 
 			/* Assures mobile devices that the site doesn't assume traditional
         	* desktop dimensions, so they won't downscale and will instead respect
@@ -26,12 +27,8 @@
        		$out->addHeadItem( 'viewport',
        			'<meta name="viewport" content="width=device-width, initial-scale=1">'
        		);
-		}
 
-		public function setupSkinUserCss( OutputPage $out ) {
-       		parent::setupSkinUserCss( $out );
-       		$out->addModuleStyles( 'skins.WikibaseMobile' );
-   		}
+		}
 
 		public function prepareData( BaseTemplate $tpl ) {
 			parent::prepareData( $tpl );									//Incoming sample HTML!!!
@@ -89,8 +86,9 @@
 		}
 	}
 
-	class WikibaseMobileTemplate extends MinervaTemplate {
+	class WikibaseMobileTemplate extends MobileTemplate {
   		protected function renderContentWrapper( $data ) {
 			echo $data['WikibaseMobileData'];
 		}
+
 	}
