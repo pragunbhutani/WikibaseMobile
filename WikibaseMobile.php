@@ -29,7 +29,14 @@ $localBasePath = dirname( __DIR__ );
 $remoteExtPath = 'WikibaseMobile';
 
 $wgResourceModules['skins.WikibaseMobile'] = array(
-   'styles' => 'WikibaseMobile/assets/WikibaseMobile.css',
+   'styles' => array(
+       'WikibaseMobile/assets/normalize.css' => array( 'media' => 'screen' ),
+       'WikibaseMobile/assets/WikibaseMobile.css' => array( 'media' => 'screen' ),
+       'WikibaseMobile/assets/WikibaseMobile66em.css' => array( 'media' => 'screen and (max-width: 66em)' ),
+       'WikibaseMobile/assets/WikibaseMobile60em.css' => array( 'media' => 'screen and (max-width: 60em)' ),
+       'WikibaseMobile/assets/WikibaseMobile40em.css' => array( 'media' => 'screen and (max-width: 40em)' ),
+       'WikibaseMobile/assets/WikibaseMobile20em.css' => array( 'media' => 'screen and (max-width: 20em)' ),
+   ),
    'remoteExtPath' => $remoteExtPath,
    'localBasePath' => $localBasePath,
 );
