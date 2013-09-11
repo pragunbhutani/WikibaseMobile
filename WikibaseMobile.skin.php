@@ -33,12 +33,20 @@
 		public function prepareData( BaseTemplate $tpl ) {
 			parent::prepareData( $tpl );									//Incoming sample HTML!!!
 
-			$tpl->set( 'WikibaseMobileData', '
+			$entity = $this->getOutput()->getProperty( 'wikibase-entity' );
+			$langCode = $this->getLanguage()->getCode();
 
+			$tpl->set( 'WikibaseMobileData', $this->renderHtml( $entity, $langCode ) );
+		}
+
+		protected function renderHtml( $entity, $langCode ) {
+			$label = $this->getLabel( $entity, $langCode );
+
+			$html = '
 				<div id="container">
 
 					<div id="title-bar">
-						<h2>Mostly Harmless</h2>
+						<h2>' . htmlspecialchars( $label ) . '</h2>
 						<div id="edit-button"></div>
 					</div>
 
@@ -81,8 +89,14 @@
 					</div>
 
 				</div>
+			';
 
-			' );
+			return $html;
+		}
+
+		protected function getLabel( array $entityData, $langCode ) {
+			$labels = $entityData['labels'];
+			return isset( $labels[$langCode] ) ? $labels[$langCode]['value'] : "<no label>";
 		}
 	}
 
