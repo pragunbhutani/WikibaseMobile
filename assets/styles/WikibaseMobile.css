@@ -5,11 +5,11 @@
 
 #title-bar 	{
 	width: 100%;
-	margin-top: 1em;
+	margin-top: 15px;
 }
 
 #title-bar h2 	{
-	margin-left: 0.3em;
+	margin-left: 2%;
 	width: 80%;
 	font-family: Helvetica Neue;
 	font-weight: lighter;
@@ -30,17 +30,18 @@
 }
 
 #description-box	{
-	padding-top: 0.5em;
+	padding-top: 5px;
 	width: 100%;
 	height: auto;
 	clear: both;
-	margin-left: 1em;
+	margin-left: 2%;
 }
 
 #description-box p {
 	font-family: sans-serif;
 	font-weight: lighter;
-	font-size: 1em;
+	font-size: 1.2em;
+	line-height: 24px;
 }
 
 #alias-box {
@@ -51,16 +52,33 @@
 #alias-box h4 {
 	font-family: sans-serif;
 	font-weight: lighter;
-	margin-left: 1.25em;
+	margin-left: 2%;
 	display: inline;
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 #alias-box p {
 	font-family: sans-serif;
 	font-weight: lighter;
 	display: inline;
-	font-size: 0.8em;
+	font-size: 1em;
+}
+
+#edit-options-container	{
+	width: 100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: none;
+}
+
+#edit-options-container	p {
+	font-family: sans-serif;
+	font-size: 1em;
+	display: inline;
+	color: blue;
+	padding-left: 2%;
+	padding-right: 5%;
 }
 
 #statements-container	{
@@ -68,63 +86,80 @@
 	width: 100%;
 	height: auto;
 	border-top: 1px solid grey;
-	margin-top: 0.5em;
-	padding-top: 0.5em;
+	margin-top: 5px;
+	padding-top: 5px;
 	text-align: center;
 }
 
 .statement {
-	width: 45%;
-	height: 6em;
+	width: 95%;
+	height: auto;
 	border: 1px solid black;
-	display: inline-block;
-	margin: 0.5em;
+	border-radius: 5px;
+	display: block;
+	margin-top: 5px;
+	margin-left: 2%;
 	text-align: left;
 }
 
+.statement-clicked {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
 .statement-add {
-	width: 45%;
-	height: 6em;
+	width: 95%;
+	height: 2em;
 	border: 1px dashed grey;
-	display: inline-block;
-	margin: 0.5em;
+	border-radius: 5px;
+	display: block;
+	margin-top: 5px;
+	margin-left: 2%;
 }
 
 .statement h5 {
-	position: absolute;
-	width: 44%;
+	width: 99%;
 	height: auto;
+	min-height: 25px;
 	font-family: sans-serif;
 	font-weight: normal;
-	font-size: 1em;
+	font-size: 1.2em;
 	color: rgba(0,0,0,0.6);
-	margin-left: 0.5em;
-	margin-top: 0.25em;
+	padding-left: 1%;
+	padding-top: 5px;
+	display: block;
+}
+
+.addBottomBorder	{
+	border-bottom: 1px dotted black;
+}
+
+.statement-content	{
+	display: none;
 }
 
 .statement p {
-	position: absolute;
-	width: 42%;
+	width: 99%;
+	padding-left: 1%;
 	height: auto;
+	min-height: 20px;
 	font-family: sans-serif;
 	font-size: 1em;
-	margin-top: 25px;
 	color: rgb(0,0,0);
-	line-height: 1em;
-	margin-left: 0.5em;
-	margin-top: 2em;
+	display: block;
 }
 
 .statement .sources {
-	position: absolute;
-	width: 44%;
+	width: 99%;
+	min-height: 20px;
+	height: auto;
+	padding-left: 1%;
 	font-family: sans-serif;
 	font-size: 0.8em;
 	color: rgba(255,0,0,0.7);
-	margin-left: 0.625em;
-	margin-top: 6em;
+	display: block;
 }
 
 #footer	{
-	margin-top: 0.5em;
+	margin-top: 5px;
 }

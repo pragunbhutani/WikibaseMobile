@@ -51,33 +51,56 @@
 						<p>Lorem ipsum, dolor, sit amet</p>
 					</div>
 
+					<div id="edit-options-container">
+						<p>Edit Title</p>
+						<p>Edit Description</p>
+						<p>Edit Aliases</p>
+					</div>
+
 					<div id="statements-container">
+
 						<div class="statement">
 							<h5>Main Type</h5>
-							<p>Creative Work<p>
-							<p class="sources">5 sources</p>
+							<div class="statement-content">
+								<p>Creative Work</p>
+								<p class="sources">5 sources</p>
+							</div>
 						</div>
+
 						<div class="statement">
 							<h5>Series</h5>
-							<p>Hitchhikers Guide to the Galaxy<p>
-							<p class="sources">2 sources</p>
+							<div class="statement-content">
+								<p>Hitchhikers Guide to the Galaxy</p>
+								<p class="sources">2 sources</p>
+							</div>
 						</div>
+
 						<div class="statement">
 							<h5>Preceded by</h5>
-							<p>So long and thanks for all the fish<p>
-							<p class="sources">5 sources</p>
+							<div class="statement-content">
+								<p>So long and thanks for all the fish</p>
+								<p class="sources">5 sources</p>
+							</div>
 						</div>
+
 						<div class="statement">
 							<h5>Author</h5>
-							<p>Douglas Adams<p>
-							<p class="sources">0 sources</p>
+							<div class="statement-content">
+								<p>Douglas Adams</p>
+								<p class="sources">0 sources</p>
+							</div>
 						</div>
+
 						<div class="statement">
 							<h5>Instance of</h5>
-							<p>Book<p>
-							<p class="sources">0 sources</p>
+							<div class="statement-content">
+								<p>Book</p>
+								<p class="sources">0 sources</p>
+							</div>
 						</div>
+
 						<div class="statement-add"></div>
+
 					</div>
 
 				</div>
