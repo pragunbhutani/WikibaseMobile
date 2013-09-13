@@ -72,8 +72,14 @@
 							<div class="statement-content">
 								<p>Blessed</p>
 									<div class="qualifier">
-										<p class="qualifier-property">Point in time</p>
-										<p class="qualifier-data">May 1 2011</p>
+										<div class="qualifier-set">
+											<p class="qualifier-property">Point in time</p>
+											<p class="qualifier-data">May 1 2011</p>
+										</div>
+										<div class="qualifier-set">
+											<p class="qualifier-property">Another Date</p>
+											<p class="qualifier-data">June 5 2011</p>
+										</div>
 										<p class="sources">5 sources</p>
 									</div>
 								<p>Venerable</p>
