@@ -76,7 +76,7 @@
 	font-family: sans-serif;
 	font-size: 1em;
 	display: inline;
-	color: blue;
+	color: #0645AD;
 	padding-left: 2%;
 	padding-right: 5%;
 }
@@ -124,14 +124,18 @@
 	font-family: sans-serif;
 	font-weight: normal;
 	font-size: 1.2em;
-	color: rgba(0,0,0,0.6);
+	color: rgb(0,0,0);
 	padding-left: 1%;
 	padding-top: 5px;
 	display: block;
+	background-color: #e8e8e8;
+	border-radius: 5px;
 }
 
 .addBottomBorder	{
 	border-bottom: 1px dotted black;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
 }
 
 .statement-content	{
@@ -145,18 +149,40 @@
 	min-height: 20px;
 	font-family: sans-serif;
 	font-size: 1em;
-	color: rgb(0,0,0);
+	color: #000;
 	display: block;
 }
 
-.statement .sources {
+.statement .qualifier	{
+	border-bottom: 1px dashed grey;
+}
+
+.statement .qualifier .qualifier-property	{
+	display: inline;
+	padding-left: 7%;
+}
+
+.statement .qualifier .qualifier-data	{
+	display: inline;
+	padding-left: 7%;
+}
+
+.statement .qualifier .sources {
+	padding-left: 7%;
 	width: 99%;
 	min-height: 20px;
 	height: auto;
-	padding-left: 1%;
 	font-family: sans-serif;
 	font-size: 0.8em;
-	color: rgba(255,0,0,0.7);
+	color: #2779AA;
+	display: block;
+}
+
+.statement .sources	{
+	width: 99%;
+	font-size: 0.8em;
+	font-family: sans-serif;
+	color: #2779AA;
 	display: block;
 }
 

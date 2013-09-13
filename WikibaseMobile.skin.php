@@ -68,6 +68,30 @@
 						</div>
 
 						<div class="statement">
+							<h5>Canonization Status</h5>
+							<div class="statement-content">
+								<p>Blessed</p>
+									<div class="qualifier">
+										<p class="qualifier-property">Point in time</p>
+										<p class="qualifier-data">May 1 2011</p>
+										<p class="sources">5 sources</p>
+									</div>
+								<p>Venerable</p>
+									<div class="qualifier">
+										<p class="qualifier-property">Point in time</p>
+										<p class="qualifier-data">December 19 2009</p>
+										<p class="sources">5 sources</p>
+									</div>
+								<p>Servant of god</p>
+									<div class="qualifier">
+										<p class="qualifier-property">Point in time</p>
+										<p class="qualifier-data">June 28 2005</p>
+										<p class="sources">5 sources</p>
+									</div>
+							</div>
+						</div>
+
+						<div class="statement">
 							<h5>Series</h5>
 							<div class="statement-content">
 								<p>Hitchhikers Guide to the Galaxy</p>
