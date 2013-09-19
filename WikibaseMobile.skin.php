@@ -127,11 +127,6 @@ use \Wikibase\Repo\WikibaseRepo;
 
 			return $html;
 		}
-
-		protected function getLabel( array $entityData, $langCode ) {
-			$labels = $entityData['labels'];
-			return isset( $labels[$langCode] ) ? $labels[$langCode]['value'] : "<no label>";
-		}
 	}
 
 	class WikibaseMobileTemplate extends MobileTemplate {
