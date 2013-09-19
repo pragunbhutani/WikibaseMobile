@@ -26,11 +26,7 @@ $wgValidSkinNames['wikibasemobile'] = 'WikibaseMobile';
 $dir = __DIR__;
 
 $wgAutoloadClasses['WikibaseMobile'] = $dir . '/WikibaseMobile.skin.php';
-$wgAutoloadClasses['WikibaseMobileHooks'] = $dir . '/WikibaseMobile.hooks.php';
-
 $wgExtensionMessagesFiles['WikibaseMobile'] = $dir . '/WikibaseMobile.i18n.php';
-
-$wgHooks['OutputPageParserOutput'][] = 'WikibaseMobileHooks::onOutputPageParserOutput';
 
 $localBasePath = dirname( __DIR__ );
 $remoteExtPath = 'WikibaseMobile';
