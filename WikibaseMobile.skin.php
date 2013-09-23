@@ -1,4 +1,9 @@
 <?php
+use \Wikibase\Lib\Serializers\EntitySerializationOptions;
+use \Wikibase\Lib\Serializers\ItemSerializer;
+use \Wikibase\Lib\Serializers\PropertySerializer;
+use \Wikibase\Repo\WikibaseRepo;
+
 /**
  * WikibaseMobile skin
  *
@@ -22,23 +27,60 @@
 			$out->addModules( 'scripts.WikibaseMobile' );
 
 			/* Assures mobile devices that the site doesn't assume traditional
-        	* desktop dimensions, so they won't downscale and will instead respect
-        	* things like CSS's @media rules */
-       		$out->addHeadItem( 'viewport',
-       			'<meta name="viewport" content="width=device-width, initial-scale=1">'
-       		);
+			* desktop dimensions, so they won't downscale and will instead respect
+			* things like CSS's @media rules */
+			$out->addHeadItem( 'viewport',
+				'<meta name="viewport" content="width=device-width, initial-scale=1">'
+			);
 
 		}
 
+		// fixme: this method is much to large.  should be split into more methods
+		// and additional classes, as needed
+		// todo: phpunit tests would also be valuable :)
 		public function prepareData( BaseTemplate $tpl ) {
-			parent::prepareData( $tpl );									//Incoming sample HTML!!!
+			parent::prepareData( $tpl );  //Incoming sample HTML!!!
 
-			$tpl->set( 'WikibaseMobileData', '
+			// todo: is there a way for user to choose a language?
+			$langCode = $this->getLanguage()->getCode();
 
+			$serializedEntity = $this->getOutput()->getProperty( 'wikibase-entity' );
+
+			// todo incorporate language fallback chain here and/or in entityview/parser output
+			$options = new EntitySerializationOptions(
+				WikibaseRepo::getDefaultInstance()->getIdFormatter()
+			);
+
+			$contentModel = $this->getTitle()->getContentModel();
+
+			// todo: have SerializerFactory return the correct
+			// serializer based on content model
+			if ( $contentModel === 'wikibase-item' ) {
+				$unserializer = new ItemSerializer( $options );
+			} elseif ( $contentModel === 'wikibase-property' ) {
+				$unserializer = new PropertySerializer( $options );
+			} else {
+				// it is some other content type, use default rendering
+				// todo: give it the default output page body text
+				$tpl->set( 'WikibaseMobileData', $this->renderHtml( 'body text', $langCode ) );
+
+				// todo: not sure what the function is supposed to return, if anything?
+				return;
+			}
+
+			$entity = $unserializer->newFromSerialization( $serializedEntity );
+
+			$tpl->set( 'WikibaseMobileData', $this->renderHtml( $entity, $langCode ) );
+		}
+
+		protected function renderHtml( $entity, $langCode ) {
+			$label = $entity->getLabel( $langCode );
+
+			$html = '
 				<div id="container">
 
 					<div id="title-bar">
-						<h2>Mostly Harmless</h2>
+						<h2>' . htmlspecialchars( $label ) . '</h2>
 						<div id="edit-button"></div>
 					</div>
 
@@ -134,8 +176,9 @@
 					</div>
 
 				</div>
+			';
 
-			' );
+			return $html;
 		}
 	}
 
