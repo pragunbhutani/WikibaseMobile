@@ -74,7 +74,10 @@ use \Wikibase\Repo\WikibaseRepo;
 		}
 
 		protected function renderHtml( $entity, $langCode ) {
+
 			$label = $entity->getLabel( $langCode );
+			$description = $entity->getDescription( $langCode );
+			$aliases = $entity->getAliases( $langCode );
 
 			$html = '
 				<div id="container">
@@ -85,12 +88,20 @@ use \Wikibase\Repo\WikibaseRepo;
 					</div>
 
 					<div id="description-box">
-						<p>The fifth part in an increasingly inaccurately named trilogy.</p>
+						<p>' . htmlspecialchars( $description ) . '</p>
 					</div>
 
 					<div id="alias-box">
 						<h4>Also known as: </h4>
-						<p>Lorem ipsum, dolor, sit amet</p>
+					';
+
+			foreach ($aliases as $alias) {
+				$html .= '<p class="alias">' . htmlspecialchars( $alias ) . '</p>';
+			}
+
+
+			$html .=
+					'
 					</div>
 
 					<div id="edit-options-container">
